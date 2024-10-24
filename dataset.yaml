@@ -1,5 +1,11 @@
+path: ./dataset/images #データセットのディレクトリ
 train: ./dataset/images/train #学習用の画像のディレクトリ
 val: ./dataset/images/val #検証用の画像のディレクトリ
 
-nc: 2 #識別する種類の数
-names: ['cat', 'dog'] #識別する種類の名前
+path: ./dataset/images #データセットのディレクトリ
+train: ./dataset/images/train #学習用の画像のディレクトリ
+val: ./dataset/images/val #検証用の画像のディレクトリ
+
+names: #識別する種類の列挙
+  0: dog
+  1: cat

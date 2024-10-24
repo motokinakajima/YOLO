@@ -60,4 +60,29 @@ pip install ultralytics opencv-python
 pip3 install ultralytics opencv-python
 ```
 
-を実行してみてください。次にデータセットを用意します。データセットの形式は上に書いてありますが、全部自前で用意するにはとても手間がかかりすぎるので例として
+を実行してみてください。次にデータセットを用意します。データセットの形式は上に書いてありますが、全部自前で用意するにはとても手間がかかりすぎるので例として[text](https://www.kaggle.com/datasets/meeratif/yolo-format-data)を使ってみましょう。
+
+まずはこのリポジトリをクローンしてみましょう。
+
+```sh
+git clone https://github.com/motokinakajima/YOLO.git
+cd YOLO
+```
+このサイトに飛んだらサイト上の右上にあるdownloadを押してダウンロードしてみましょう。ダウンロードができたらクローンしたYOLOのファイルの中のdatasetのフォルダを変えてみましょう。元あったファイル構造に沿うようにファイルをコピペしてみてください。.gitkeepと書いてあるファイルは消してしまって構いません(githubの仕様上追加しているものなので)。また、dataset.yamlの内容を変更してみましょう。これはダウンロードした中のcoco128.yamlを参考にして書きます
+
+```yaml
+path: ./dataset/images #データセットのディレクトリ
+train: ./dataset/images/train #学習用の画像のディレクトリ
+val: ./dataset/images/val #検証用の画像のディレクトリ
+
+names: #識別する種類の列挙
+  0: gadi
+  1: piyari
+  2: hamrah
+  3: mobile
+  4: watch
+  5: bili
+  6: khuto
+```
+
+これで準備は整いました。
